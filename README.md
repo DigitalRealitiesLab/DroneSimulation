@@ -1,4 +1,4 @@
-# TFVXRP
+# DroneSimulation
 
 This project serves as a supplement for the paper _Towards a Framework for Validation XR Prototyping for
 Performance Evaluations of Simulated User Experiences_ from Plümer and Tatzgern. 
@@ -21,7 +21,7 @@ It provides the opportunity to reproduce the experiments conducted in the paper.
   - Steam Base-Station Generation used: 2.0
   - VIVE Tracker Generation used: 2018
 - XBox-Controller, connected to the PC, for steering the drone
-- Ryze Tello drone for the REAL and MED conditions
+- [Ryze Tello](https://www.ryzerobotics.com/de/tello) drone for the REAL and MED conditions
 
 ## Room Model
 
