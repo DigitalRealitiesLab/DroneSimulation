@@ -1,9 +1,8 @@
 # DroneSimulation
 
-This project serves as a supplement for the paper _Towards a Framework for Validation XR Prototyping for
-Performance Evaluations of Simulated User Experiences_ from Plümer and Tatzgern. 
-It provides the opportunity to reproduce the experiments conducted in the paper.
+This project serves as a supplemental material for the following paper: J.H. Plümer, M. Tatzgern. "Towards a Framework for Validation XR Prototyping for Performance Evaluations of Simulated User Experiences", 2023 IEEE International Symposium on Mixed and Augmented Reality (ISMAR), Sydney, Australia, 2023, pp. X-X, doi: XXX.
 
+The project represents the source code utilized for performing the user study described in the paper. Please cite the paper above when utilizing this project.
 
 # Requirements
 
@@ -25,16 +24,11 @@ It provides the opportunity to reproduce the experiments conducted in the paper.
 
 ## Room Model
 
-For the MED-Conditions, the real room was overlaid with a virtual representation of itself, utilizing a VIVE Tracker. 
-To do this, the real room was first measured and then remodelled in Unity. 
-This means, wherever else this project might be used, the room model will not match. 
-At least for serious reproductions, it is advisable to first create a new, own room model and 
-for this purpose to use the supplied room model only as a guide.
+For the MED condition, the real room was overlaid with a virtual representation of itself, utilizing a VIVE Tracker. To do this, the real room was first measured and then remodelled in Unity. Hence, the room model will not match other settings and needs to be adapted for any use in other scenarios. 
 
 # Preparing the project
 
-This project is dependent on the drone asset mentioned [above](#requirements). After including it, some slight
-changes must be performed within _YueDronePhysics.cs_:
+This project is dependent on the drone asset mentioned [above](#requirements). After including it, small changes are required in _YueDronePhysics.cs_:
 
 ---
 Delete:
@@ -97,11 +91,11 @@ protected Rigidbody rb;
 
 The entry point of the program is the _Menu Scene_. 
 After launch, `SceneType` and `TaskType` can be configured and a participant ID (numeric) must be provided. 
-This is also the default Screen after a participant completed a condition and the corresponding data was saved.
+This is also the default screen after a participant completed a condition and the corresponding data was saved.
 From here, the program can be closed and the collected data can be exported to a `.csv`-file.
 
 _Main Scene_ enables the participants to fly the drones and to complete the conditions.
-There are some optional buttons in case of emergencies, for example to log crashes or to reconnect to the drone.
+There are some optional buttons for special cases, e. g., to log crashes or to reconnect to the drone.
 On the right side, the experimenter can type in the accuracies per landing for the REAL and MED conditions.
 **ATTENTION**: Do not do this, while the participant is still flying, as selecting the input fields can interfere
 with the participants ability to control the drone.
@@ -112,7 +106,6 @@ with the participants ability to control the drone.
   In case of REAL and MED conditions, the PC must also be connected to the drone's wireless network.
 
 For each condition, the _Menu_-Button needs to be pressed once, initially. 
-Think of it as some sort of ignition.
 Afterwards, the drone can be started with pressing _A_ and landed with _B_. 
 Use the left stick to control the drones horizontal position (forward, backwards, left, right).
 Use the right stick to control the drones vertical position (up, down).
@@ -128,7 +121,7 @@ This directory also contains the raw data in json-Format, partly separated per p
 # License
 This project is licensed under [The MIT License](LICENSE.md).
 
-# Contributions
+# Attributions
 
 Knowledge, orientation and ideas of how to connect and control the _Tello_-drone were gained from:
 - [TelloLib](https://github.com/Kragrathea/TelloLib)
